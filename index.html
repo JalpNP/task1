@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">
+            <span>Follow On: </span>
+            <ul>
+                <li class="social"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="social"><a href="https://www.instagram.com/jalppatel_95/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="center">
+            <a href="./index.html">
+                <h1 class="title1">FOOD CAFE</h1>
+            </a>
+        </div>
+        <div class="right">
+            <ul>
+                <li>
+                    <div class="language">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <select style="cursor: pointer;" id="selectlan" name="dropdown">
+                            <option>English</option>
+                            <option>Italian</option>
+                            <option>France</option>
+                            <option>Spanish</option>
+                            <option>Poland</option>
+                            <option>German</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <a class="loginbtn" onclick="openbar()">LOGIN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="demo" class="sidebar">
+        <a style="cursor: pointer;" class="closebtn" onclick="closebar()">X</a>
+        <div class="login-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email1" onkeyup="uemail1()" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password1" onkeyup="upassword1()" required>
+
+            <p id="err1" style="color: rgb(255, 0, 0); font-size: 15px;"></p>
+
+
+            <button type="submit" onclick="return validateForm1()" value="Submit1">Login</button>
+        </div>
+      </div>
+
+    <div class="co_header">
+        <ul>
+            <li onclick="show1()">
+                <a href="#">Home</a>
+                <ul class="drop1">
+                    <li>
+                        <a href="#">Home1</a>
+                        <a href="#">Home2</a>
+                        <a href="#">Home3</a>
+                    </li>
+                </ul>
+            </li>
+            <li onclick="show2()">
+                <a href="#">About Us</a>
+                <ul class="drop2">
+                    <li>
+                        <a href="#">Who We Are</a>
+                        <a href="#">Team</a>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </li>
+            <li onclick="show3()">
+                <a href="#">Services</a>
+                <ul class="drop3">
+                    <li>
+                        <a href="#">Service1</a>
+                        <a href="#">Service2</a>
+                        <a href="#">Service3</a>
+                    </li>
+                </ul>
+            </li>
+            <li onclick="show4()">
+                <a href="#">Gallery</a>
+                <ul class="drop4">
+                    <li>
+                        <a href="#">Gallery1</a>
+                        <a href="#">Gallery2</a>
+                        <a href="#">Gallery3</a>
+                    </li>
+                </ul>
+            </li>
+            <li onclick="show5()">
+                <a href="#">Contact Us</a>
+                <ul class="drop5">
+                    <li>
+                        <a href="#">Contact1</a>
+                        <a href="#">Contact2</a>
+                        <a href="#">Contact3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="slider">
+        <div class="imgcont">
+            <img id="image1" src="./food1.avif" alt="" class="active">
+            <img id="image2" src="./food2.jpg" alt="">
+            <img id="image3" src="./food3.avif" alt="">
+        </div>
+        <button class="previous" onclick="prebtn()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="nextbtn()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+    <div class="imgchange">
+        <div class="groupbtn">
+            <button onclick="home()">Home</button>
+            <button onclick="service()">Service</button>
+            <button onclick="contact()">Contact</button>
+        </div>
+        <div class="imgcontainer">
+            <img src="./home.jpg" alt="" id="image4" class="active">
+            <img src="./service.jpg" alt="" id="image5">
+            <img src="./contact.webp" alt="" id="image6">
+        </div>
+    </div>
+    <div class="foodContainer">
+        <div class="allbtns">
+            <button onclick="coffee()">Coffee</button>
+            <button onclick="drink()">Cold Drinks</button>
+            <button onclick="fastfood()">Fastfood</button>
+            <button onclick="tea()">Tea</button>
+            <button onclick="allItems()">All</button>
+        </div>
+        <div class="foodimages">
+            <div id="box1" class="active sameclass">
+                <div class="card1">
+                    <img src="./Cappuccino.jpg" alt="">
+                    <h4>Cappuccino</h4>
+                </div>
+                <div class="card1">
+                    <img src="./Espresso.avif" alt="">
+                    <h4>Espresso</h4>
+                </div>
+                <div class="card1">
+                    <img src="./caffe latte.webp" alt="">
+                    <h4>Caffe Latte</h4>
+                </div>
+                <div class="card1">
+                    <img src="./cold brew.jpeg" alt="">
+                    <h4>Cold Brew</h4>
+                </div>
+            </div>
+            <div id="box2" class="sameclass">
+                <div class="card1">
+                    <img src="./Sprite.jpg" alt="">
+                    <h4>Sprite</h4>
+                </div>
+                <div class="card1">
+                    <img src="./thumbsup.jpg" alt="">
+                    <h4>Thums Up</h4>
+                </div>
+                <div class="card1">
+                    <img src="./pepsi.jpg" alt="">
+                    <h4>Pepsi</h4>
+                </div>
+                <div class="card1">
+                    <img src="./limca.webp" alt="">
+                    <h4>Limca</h4>
+                </div>
+            </div>
+            <div id="box3" class="sameclass">
+                <div class="card1">
+                    <img src="./burger.jpg" alt="">
+                    <h4>KFC Burger</h4>
+                </div>
+                <div class="card1">
+                    <img src="./pizza.jpg" alt="">
+                    <h4>Pizza</h4>
+                </div>
+                <div class="card1">
+                    <img src="./taco.webp" alt="">
+                    <h4>Toco</h4>
+                </div>
+                <div class="card1">
+                    <img src="./vadapav.jpg" alt="">
+                    <h4>Vadapav</h4>
+                </div>
+            </div>
+            <div id="box4" class="sameclass">
+                <div class="card1">
+                    <img src="./blacktea.jpg" alt="">
+                    <h4>Black Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./greentea.jpg" alt="">
+                    <h4>Green Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./herbaltea.jpg" alt="">
+                    <h4>Herbal Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./oolongtea.jpeg" alt="">
+                    <h4>Oolong Tea</h4>
+                </div>
+            </div>
+            <div id="box5" class="sameclass">
+                <div class="card1">
+                    <img src="./Cappuccino.jpg" alt="">
+                    <h4>Cappuccino</h4>
+                </div>
+                <div class="card1">
+                    <img src="./Espresso.avif" alt="">
+                    <h4>Espresso</h4>
+                </div>
+                <div class="card1">
+                    <img src="./caffe latte.webp" alt="">
+                    <h4>Caffe Latte</h4>
+                </div>
+                <div class="card1">
+                    <img src="./cold brew.jpeg" alt="">
+                    <h4>Cold Brew</h4>
+                </div>
+                <div class="card1">
+                    <img src="./Sprite.jpg" alt="">
+                    <h4>Sprite</h4>
+                </div>
+                <div class="card1">
+                    <img src="./thumbsup.jpg" alt="">
+                    <h4>Thums Up</h4>
+                </div>
+                <div class="card1">
+                    <img src="./pepsi.jpg" alt="">
+                    <h4>Pepsi</h4>
+                </div>
+                <div class="card1">
+                    <img src="./limca.webp" alt="">
+                    <h4>Limca</h4>
+                </div>
+                <div class="card1">
+                    <img src="./burger.jpg" alt="">
+                    <h4>KFC Burger</h4>
+                </div>
+                <div class="card1">
+                    <img src="./pizza.jpg" alt="">
+                    <h4>Pizza</h4>
+                </div>
+                <div class="card1">
+                    <img src="./taco.webp" alt="">
+                    <h4>Toco</h4>
+                </div>
+                <div class="card1">
+                    <img src="./vadapav.jpg" alt="">
+                    <h4>Vadapav</h4>
+                </div>
+                <div class="card1">
+                    <img src="./blacktea.jpg" alt="">
+                    <h4>Black Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./greentea.jpg" alt="">
+                    <h4>Green Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./herbaltea.jpg" alt="">
+                    <h4>Herbal Tea</h4>
+                </div>
+                <div class="card1">
+                    <img src="./oolongtea.jpeg" alt="">
+                    <h4>Oolong Tea</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bgImg">
+        <div class="foodImg">
+        <div class="contact-form">
+            <h1>GET IN TOUCH</h1>
+           <form>
+              <input type="text" placeholder="Name" id="name" onkeyup="uname()">
+
+              <input type="email" placeholder="Email" id="email" onkeyup="uemail()">
+
+              <input type="password" placeholder="Password" id="password" onkeyup="upassword()">
+          
+              <textarea id="message" placeholder="Your Message" rows="8" onkeyup="message()"></textarea>
+
+              <p id="err" style="color: rgb(255, 0, 0); font-size: 25px;"></p>
+          
+              <input type="submit" onclick="return validateForm()" value="Submit">
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="last">
+        <div class="lastbtn">
+        <button><b>OUR STORY</b></button>
+        <button><b>MISSION</b></button>
+        <button><b>VISION</b></button>
+    </div>
+    </div>
+</body>
+
+<script src="./script.js">
+</script>
+
+</html>
